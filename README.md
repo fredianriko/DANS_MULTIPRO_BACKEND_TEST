@@ -2,7 +2,7 @@
 
 PLEASE CONFIGURE
 
-- change .env_example file depends on your machine
+- change .env_example to .env file depends on your machine
 
 ### GET THE POSTMAN COLLECTION FROM THIS ROOT PROJECT
 
