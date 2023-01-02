@@ -1,3 +1,13 @@
+### NOTE
+
+PLEASE CONFIGURE
+
+- change .env_example file depends on your machine
+
+### GET THE POSTMAN COLLECTION FROM THIS ROOT PROJECT
+
+- DANS MULTIPRO TEST.postman_collection.json
+
 ### PROJECT DEPENDENCIES
 
 - express

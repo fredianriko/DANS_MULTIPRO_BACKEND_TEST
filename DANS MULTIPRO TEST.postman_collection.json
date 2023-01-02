@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "9f6c03af-58dc-4cea-9216-06765dcd16c2",
+		"name": "DANS MULTIPRO TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19617117"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"access_token\", pm.response.json().access_token)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"john\",\r\n    \"password\" : 12345678\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john\",\r\n    \"password\": 12345678,\r\n    \"passwordConfirmation\": 12345678\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JOB",
+			"item": [
+				{
+					"name": "GET JOB LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/getJobList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"getJobList"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "ruby",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "java",
+									"disabled": true
+								},
+								{
+									"key": "full_time",
+									"value": "fulltime",
+									"disabled": true
+								},
+								{
+									"key": "ID",
+									"value": "32bf67e5-4971-47ce-985c-44b6b3860cdb",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET JOB BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/getJobList/1f004d5a-ef14-4533-8c0b-5f354978ddae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"getJobList",
+								"1f004d5a-ef14-4533-8c0b-5f354978ddae"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
